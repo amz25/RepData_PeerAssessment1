@@ -42,7 +42,7 @@ mean_daily_steps <- mean(steps_per_day$TotalSteps[!is.na(steps_per_day$TotalStep
 cat("Mean daily steps: ", mean_daily_steps)
 
 median_daily_steps <- median(steps_per_day$TotalSteps[!is.na(steps_per_day$TotalSteps)])
-cat("Mean daily steps: ", median_daily_steps)
+cat("Median daily steps: ", median_daily_steps)
 
 hist(steps_per_day$TotalSteps, breaks=10, xlim=c(0,25000), main="Histogram of total number of steps per day,\nwith mean and median", xlab="Total steps")
 abline(v=mean_daily_steps, col = "red", lwd = 1)
@@ -107,7 +107,7 @@ abline(v=mean_daily_steps_imputed, col = "red", lwd = 1)
 text(mean_daily_steps_imputed + 2000,10,paste("mean:\n",round(mean_daily_steps_imputed, 2),"\n\nmedian:\n",round(median_daily_steps_imputed, 2)), col = "red", adj = c(0,0))
 ```
 
-*The values are not very different from the earlier values.  The mean is exactly the same, and the median has become the same as the mean.*
+*The values are not very different from the earlier values.  The mean is exactly the same, and the median has become the same as the mean.  The impact of the imputed values can be seen in the histogram; the bin that contains the mean and median has a much higher frequency with the imputed values.*
 
 ## Are there differences in activity patterns between weekdays and weekends?
 

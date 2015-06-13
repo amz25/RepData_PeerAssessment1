@@ -74,11 +74,11 @@ cat("Mean daily steps: ", mean_daily_steps)
 
 ```r
 median_daily_steps <- median(steps_per_day$TotalSteps[!is.na(steps_per_day$TotalSteps)])
-cat("Mean daily steps: ", median_daily_steps)
+cat("Median daily steps: ", median_daily_steps)
 ```
 
 ```
-## Mean daily steps:  10765
+## Median daily steps:  10765
 ```
 
 ```r
@@ -180,7 +180,7 @@ text(mean_daily_steps_imputed + 2000,10,paste("mean:\n",round(mean_daily_steps_i
 
 ![](PA1_template_files/figure-html/unnamed-chunk-9-1.png) 
 
-*The values are not very different from the earlier values.  The mean is exactly the same, and the median has become the same as the mean.*
+*The values are not very different from the earlier values.  The mean is exactly the same, and the median has become the same as the mean.  The impact of the imputed values can be seen in the histogram; the bin that contains the mean and median has a much higher frequency with the imputed values.*
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
